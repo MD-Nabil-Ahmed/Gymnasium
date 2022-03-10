@@ -1,0 +1,148 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+
+
+
+/*===================================================================================================
+                                            footer part start
+=====================================================================================================*/
+#footer {
+    padding: 30px 0 20px;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include after_tl(0, 0, 100%, 100%, rgba(0, 0, 0, 0.85));
+        z-index: -1;
+    }
+
+    .foot_logo {
+        border-bottom: 1px solid #ddd;
+
+        img {
+            margin-bottom: 30px;
+        }
+    }
+
+    .foot_main {
+        padding: 30px 0;
+
+        h3 {
+            @include fs(#fff, 14px, 400, $oswd);
+            text-transform: uppercase;
+            margin-bottom: 20px
+        }
+
+        ul {
+            li {
+                @include fs(#ddd, 13px, 400, $open);
+                padding: 5px 0;
+
+                span {
+                    display: end;
+                    margin-left: 110px;
+                }
+            }
+        }
+
+        .p_1 {
+            i {
+                color: #1da1f2;
+                display: inline-block;
+            }
+
+            p {
+                color: #fff;
+                margin: -25px 0 0 30px;
+                display: inline-block;
+                @include fs(#ddd, 13px, 400, $open);
+                line-height: 18px
+            }
+
+            span {
+                @include fs(#ddd, 13px, 400, $open);
+                margin-left: 30px;
+            }
+        }
+
+        .p_2 {
+            margin-top: 30px;
+        }
+
+        img {
+            margin: 5px 2.5px;
+            width: 21.8%;
+        }
+
+        a {
+            @include fs(#ddd, 13px, 400, $open);
+            margin-bottom: 10px;
+
+            i {
+                margin-right: 10px;
+                color: $hover;
+            }
+
+            span {
+                display: block;
+                margin-left: 20px;
+            }
+        }
+
+        h4 {
+            @include fs(#fff, 14px, 400, $oswd);
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        .foot_link {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            margin-top: 25px;
+
+            li {
+                a {
+                    i {
+                        height: 30px;
+                        width: 30px;
+                        border: 1px solid #fff;
+                        text-align: center;
+                        line-height: 30px;
+                        color: #fff;
+                        transition: all linear .3s;
+                    }
+
+                    &:hover {
+                        i {
+                            background: $hover;
+                            border-color: $hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copy {
+        border-top: 1px solid #ddd;
+        padding: 20px 0 0;
+        text-align: center;
+
+        p {
+            @include fs(#fff, 14px, 400, $open);
+
+            a {
+                @include fs($hover, 14px, 400, $open);
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+/*===================================================================================================
+                                            footer part end
+=====================================================================================================*/

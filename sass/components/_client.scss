@@ -1,0 +1,75 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+
+
+/*===================================================================================================
+                                            classes part start
+=====================================================================================================*/
+#client {
+    padding-bottom: 80px;
+
+    .client_slider {
+        position: relative;
+
+        .draggable {
+            padding: 10px 0 !important;
+        }
+
+        .slick-slide {
+            padding: 0 12px;
+        }
+
+        .slick-center {
+            img {
+                box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    .prev_arr {
+        position: absolute;
+        top: 50%;
+        left: -3%;
+        z-index: 99;
+        transform: translateY(-50%);
+        font-size: 25px;
+        color: #444;
+        display: block;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        transition: all linear .3s;
+
+        &:hover {
+            color: $hover;
+        }
+    }
+
+    .nxt_arr {
+        position: absolute;
+        top: 50%;
+        right: -3%;
+        z-index: 99;
+        transform: translateY(-50%);
+        font-size: 25px;
+        color: #444;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        display: block;
+        cursor: pointer;
+        transition: all linear .3s;
+
+        &:hover {
+            color: $hover;
+        }
+    }
+}
+
+/*===================================================================================================
+                                            classes part end
+=====================================================================================================*/

@@ -1,0 +1,70 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+
+
+/*================================================================================================
+                                                gallery part start
+==================================================================================================*/
+#gallery {
+    padding: 75px 0 0;
+
+    .common_head {
+        margin-bottom: 30px;
+
+        h2 {
+            @include fs($head, 22px, 400, $oswd);
+            text-transform: uppercase;
+        }
+    }
+
+    .gal_ban {
+        padding: 30px 0;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            @include after_tl(0, 0, 100%, 100%, rgba(0, 0, 0, 0.8));
+            z-index: -1;
+        }
+
+        .gal_img {
+            position: relative;
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            .overly {
+                position: absolute;
+                top: 10px;
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                background: rgba(226, 62, 56, 0.5);
+                border: 5px solid #bbb7ae;
+                transform: scale(0);
+                transition: all linear .3s;
+
+                a {
+                    @include middle();
+                    font-size: 30px;
+                    color: #fff;
+                }
+            }
+
+            &:hover {
+                .overly {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+/*================================================================================================
+                                                gallery part end
+==================================================================================================*/

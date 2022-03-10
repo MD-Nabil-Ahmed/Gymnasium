@@ -1,0 +1,104 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+
+
+
+/*===================================================================================================
+                                            classes part start
+=====================================================================================================*/
+#classes {
+    padding: 85px 0 80px;
+
+    .common_head {
+        margin-bottom: 30px;
+
+        h2 {
+            @include fs($head, 22px, 400, $oswd);
+            text-transform: uppercase;
+        }
+    }
+
+    .class_menu {
+        height: 50px;
+        background: #f1f1f1;
+        margin-bottom: 30px !important;
+
+        li {
+            width: 16.6666666666666%;
+
+            button {
+                height: 50px;
+                width: 100%;
+                @include fs(#222, 14px, 400, $oswd);
+                text-transform: uppercase;
+                border-radius: 0;
+                transition: all linear .3s;
+
+                &.active,
+                .show>.nav-link {
+                    color: #fff;
+                    background-color: $hover;
+                }
+            }
+        }
+    }
+
+    .class_text {
+
+        ul {
+            li {
+                width: 19.698%;
+                background: #f1f1f1;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                padding: 50px 45px;
+                transition: all linear .3s;
+
+                &:hover {
+                    background: $hover;
+
+                    p,
+                    i,
+                    span {
+                        color: #fff;
+                    }
+                }
+
+                p {
+                    @include fs(#222, 16px, 400, $open);
+                    margin-bottom: 5px;
+                }
+
+                i {
+                    font-size: 30px;
+                    display: block;
+                }
+
+                span {
+                    @include fs(#444, 14px, 400, $open);
+                }
+
+                &:nth-child(5),
+                &:nth-child(10) {
+                    margin-right: 0;
+                }
+
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(8),
+                &:nth-child(9),
+                &:nth-child(10) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/*===================================================================================================
+                                            classes part end
+=====================================================================================================*/

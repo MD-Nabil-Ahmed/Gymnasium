@@ -1,0 +1,80 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+
+
+/*================================================================================================
+                                                menu part start
+==================================================================================================*/
+.main_menu {
+    height: 50px;
+    background: rgba(53, 53, 53, 0.25);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    .navbar-brand {
+        background: #323232;
+        width: 246px;
+        text-align: center;
+        height: 70px;
+        line-height: 70px;
+        transform: skew(-40deg);
+
+        &::after {
+            @include after_tl(0, 0, 100%, 4px, #000);
+        }
+
+        &::before {
+            @include after_tr(0, 0, 100%, 4px, #000);
+        }
+
+        img {
+            transform: skew(40deg);
+        }
+    }
+
+    ul {
+        li {
+            a {
+                @include fs(#f1f1f1, 14px, 400, $oswd);
+                text-transform: uppercase;
+                padding: 0 10px;
+                line-height: 50px;
+                position: relative;
+                transition: all linear .3s;
+
+                &:hover {
+                    color: $head;
+                    background: #fff;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &::after {
+                    @include after_bl (0, 0, 3px, 0, $hover);
+                    transition: all linear .3s;
+                }
+            }
+        }
+    }
+}
+
+.fix_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #000;
+}
+
+/*================================================================================================
+                                                menu part end
+==================================================================================================*/

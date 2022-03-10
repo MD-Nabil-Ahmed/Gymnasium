@@ -1,0 +1,96 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+
+
+/*================================================================================================
+                                                testimonial part start
+==================================================================================================*/
+
+#testimonial {
+    padding: 30px 0 0;
+    .common_head {
+        margin-bottom: 30px;
+
+        h2 {
+            @include fs($head, 22px, 400, $oswd);
+            text-transform: uppercase;
+        }
+    }
+
+    .test_ban {
+        padding: 80px 0;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            @include after_tl(0, 0, 100%, 100%, rgba(0, 0, 0, 0.8));
+            z-index: -1;
+        }
+
+        .test {
+            padding: 0 12px;
+
+            p {
+                @include fs(#ddd, 13px, 400, $open);
+                line-height: 18px;
+                margin-top: 5px;
+            }
+
+            .test_head {
+                h3 {
+                    text-transform: uppercase;
+                    @include fs(#fff, 14px, 400, $oswd);
+                }
+
+                h4 {
+                    @include fs(#fff, 14px, 400, $oswd);
+                    margin: 5px 0;
+                }
+
+                a {
+                    color: #e23e38;
+                }
+            }
+        }
+
+        .slick-dots {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                margin-left: 10px;
+
+                button {
+                    font-size: 0;
+                    height: 15px;
+                    width: 15px;
+                    border: 2px solid #fff;
+                    background: transparent;
+                    border-radius: 50%;
+                }
+            }
+
+            .slick-active {
+                button {
+                    height: 20px;
+                    width: 20px;
+                    background: red;
+                    border-color: red;
+                }
+            }
+
+        }
+    }
+}
+
+/*================================================================================================
+                                                testimonial part end
+==================================================================================================*/

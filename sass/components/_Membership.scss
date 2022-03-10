@@ -1,0 +1,108 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+
+
+
+/*===================================================================================================
+                                            Membership part start
+=====================================================================================================*/
+#membership {
+    padding: 85px 0 90px;
+
+    .common_head {
+        margin-bottom: 30px;
+
+        h2 {
+            @include fs($head, 22px, 400, $oswd);
+            text-transform: uppercase;
+        }
+    }
+
+    .row {
+
+        .card {
+            transition: all linear .3s;
+            border: none;
+
+            &:hover {
+
+                .card_head {
+                    background: #e23e38;
+
+                    h4 {
+                        color: #fff;
+                    }
+                }
+
+                .card_link {
+                    background: #e23e38;
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+
+            .card_head {
+
+                padding: 15px 0;
+                background: #ddd;
+                transition: all linear .3s;
+
+                h4 {
+                    @include fs(#222, 16px, 700, $oswd);
+                    text-transform: uppercase;
+                }
+            }
+
+            .card_ban {
+                position: relative;
+
+                .overly {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.8);
+
+                    h2 {
+                        @include fs(#fff, 50px, 500, $oswd);
+                        line-height: 125px;
+                    }
+                }
+            }
+
+            .card_list {
+                background: #f1f1f1;
+
+                ul {
+                    padding: 40px 0;
+
+                    li {
+                        @include fs(#444, 14px, 400, $open);
+                        padding: 10px 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .card_link {
+                background: #ddd;
+                padding: 5px 0;
+                transition: all linear .3s;
+
+                a {
+                    @include fs(#222, 16px, 400, $oswd);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+/*===================================================================================================
+                                            Membership part end
+=====================================================================================================*/

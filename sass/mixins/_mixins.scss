@@ -1,0 +1,57 @@
+@mixin fs ($fc, $fs, $fw, $ff, ) {
+    color: $fc;
+    font-size: $fs;
+    font-weight: $fw;
+    font-family: $ff;
+}
+
+
+
+@mixin after_tl ($l, $t, $h, $w, $bg) {
+    position: absolute;
+    content: '';
+    left: $l;
+    top: $t;
+    height: $h;
+    width: $w;
+    background: $bg;
+}
+
+
+@mixin after_tr ($r, $t, $h, $w, $bg) {
+    position: absolute;
+    content: '';
+    right: $r;
+    top: $t;
+    height: $h;
+    width: $w;
+    background: $bg;
+}
+
+@mixin after_bl ($l, $b, $h, $w, $bg) {
+    position: absolute;
+    content: '';
+    left: $l;
+    bottom: $b;
+    height: $h;
+    width: $w;
+    background: $bg;
+}
+
+@mixin after_br ($r, $b, $h, $w, $bg) {
+    position: absolute;
+    content: '';
+    right: $r;
+    bottom: $b;
+    height: $h;
+    width: $w;
+    background: $bg;
+}
+
+
+@mixin middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

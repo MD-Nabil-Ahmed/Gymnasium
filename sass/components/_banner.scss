@@ -1,0 +1,119 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+
+
+/*================================================================================================
+                                                banner part start
+==================================================================================================*/
+.banner_item {
+    padding: 254px 0 118px;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include after_tl(0, 0, 100%, 100%, rgba(0, 0, 0, 0.6));
+        z-index: -1;
+    }
+
+    .banner_text {
+        h2 {
+            @include fs(#fff, 30px, 700, $oswd);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            position: relative;
+
+            &::after {
+                @include after_tl(-25px, 20px, 3px, 227px, $hover);
+                clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+            }
+
+            &::before {
+                @include after_tr(-25px, 20px, 3px, 177px, $hover);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+            }
+        }
+
+        h1 {
+            @include fs($hover, 60px, 700, $oswd);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            position: relative;
+
+            &::after {
+                @include after_tl(-25px, -23px, 196px, 3px, $hover);
+            }
+
+            &::before {
+                @include after_tr(-25px, -23px, 196px, 3px, $hover);
+            }
+        }
+
+        p {
+            @include fs(#ddd, 13px, 400, $open);
+            line-height: 18px;
+            position: relative;
+
+            &::after {
+                @include after_bl(-22px, -50px, 3px, 137px, $hover);
+            }
+
+            &::before {
+                @include after_br(-22px, -50px, 3px, 110px, $hover);
+            }
+        }
+
+        a {
+            padding: 5px 20px;
+            @include fs(#fff, 16px, 500, $oswd);
+            text-transform: uppercase;
+            border: 1px solid #fff;
+            margin: 30px 12.5px 0;
+            transition: all linear .3s;
+
+            &:hover {
+                background: $hover;
+                border-color: $hover;
+            }
+        }
+    }
+}
+
+#banner {
+    .slick-dots {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+            button {
+                font-size: 0;
+                width: 15px;
+                height: 15px;
+                border: 1px solid #fff;
+                border-radius: 100%;
+                margin: 0 5px;
+                background: transparent;
+            }
+
+            &.slick-active {
+                button {
+                    background: $hover;
+                    border-color: $hover;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+
+/*================================================================================================
+                                                banner part end
+==================================================================================================*/

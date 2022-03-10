@@ -1,0 +1,114 @@
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+
+
+
+
+/*================================================================================================
+                                                team part start
+==================================================================================================*/
+#team {
+    padding: 75px 0 0;
+    text-align: center;
+
+    .common_head {
+        // margin-bottom: 30px;
+
+        h2 {
+            @include fs($head, 22px, 400, $oswd);
+            text-transform: uppercase;
+        }
+    }
+
+
+    .team_main {
+        margin-top: 72px;
+        transition: all linear .3s;
+
+        &:hover {
+            transform: translateY(-42px);
+
+            .team_img {
+                .overly {
+                    transform: scale(1);
+                }
+            }
+
+            .team_text {
+                border: 1px solid #ddd;
+
+                p {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .team_img {
+            position: relative;
+
+            .overly {
+                position: absolute;
+                top: 10px;
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                background: rgba(226, 62, 56, 0.5);
+                border: 5px solid #bbb7ae;
+                transform: scale(0);
+                transition: all linear .3s;
+
+                ul {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+
+                    li {
+                        a {
+                            width: 30px;
+                            height: 30px;
+                            border: 1px solid #fff;
+                            color: #fff;
+                            margin-bottom: 10px;
+                            transition: all linear .3s;
+
+                            &:hover {
+                                color: #1da0f2;
+                                background: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .team_text {
+            transition: all linear .3s;
+            
+            h4 {
+                @include fs(#222, 14px, 400, $oswd);
+                text-transform: uppercase;
+                margin: 20px 0 5px;
+            }
+
+            h5 {
+                @include fs(#444, 14px, 400, $oswd);
+            }
+
+            p {
+                @include fs(#444, 13px, 400, $open);
+                line-height: 18px;
+                transform: scale(0);
+                width: 230px;
+                margin: 0 auto;
+                margin-top: 10px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+/*================================================================================================
+                                                team part end
+==================================================================================================*/
