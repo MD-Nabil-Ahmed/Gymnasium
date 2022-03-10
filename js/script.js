@@ -6,7 +6,7 @@ $(function () {
     $('#banner').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 1000,
         arrows: false,
         dots: true,
@@ -58,7 +58,7 @@ $(function () {
     $('.text_slider').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 1000,
         arrows: false,
         dots: true,
@@ -118,7 +118,7 @@ $(function () {
         centerPadding: '0',
         slidesToShow: 5,
         arrows: true,
-        autoplay: false,
+        autoplay: true,
         prevArrow: '<i class="fa-solid fa-chevron-left prev_arr"></i>',
         nextArrow: '<i class="fa-solid fa-chevron-right nxt_arr"></i>',
         autoplaySpeed: 1000,
